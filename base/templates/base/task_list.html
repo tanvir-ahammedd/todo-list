@@ -6,7 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    {% if request.user.is_authenticated %}
+        <p>{{request.user}}</p>
+        <a href="{% url "logout" %}">Logout</a>
+    {% else %}
+        <a href="{% url "login" %}">Login</a>
+    {% endif %}
     <h2>My To Do List</h2>
+    <hr>
     <a href="task_create">create</a>
     <table>
         <tr>
