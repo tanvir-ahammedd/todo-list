@@ -12,9 +12,9 @@
     {% else %}
         <a href="{% url "login" %}">Login</a>
     {% endif %}
-    <h2>My To Do List</h2>
+    <h2>My To Do List </h2>
     <hr>
-    <a href="task_create">create</a>
+    <a href="task_create">create</a> <br>
     <table>
         <tr>
             <th>Item</th>
@@ -31,5 +31,8 @@
         <h3>No item in the list</h3>
         {% endfor %}
     </table>
+    {% if count %}
+        <p>Total tasks: {{ count }}</p>
+    {% endif %}
 </body>
 </html>
