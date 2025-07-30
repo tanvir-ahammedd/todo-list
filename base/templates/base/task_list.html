@@ -18,6 +18,12 @@
     <h2>My To Do List </h2>
     <hr>
     <a href="task_create">create</a> <br>
+
+    <form method="GET">
+        <input type="text" name="search-area" value="{{ search_input }}">
+        <input type="submit" value="Search">
+    </form>
+
     {% if tasks %}
         <table>
             <tr>
